@@ -24,12 +24,7 @@ class PurchaseResponse extends AbstractResponse
 
     public function getTransactionReference()
     {
-        $location = $this->response->getHeader('location');
-        if (!empty($location)) {
-            $urlParts = explode('/', $location);
-
-            return end($urlParts);
-        }
+        return $this->response->getHeader('paymentrequesttoken');
     }
 
     public function getMessage()
