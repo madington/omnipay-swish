@@ -96,7 +96,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
     public function getData()
     {
-        $this->validate('notifyUrl', 'amount', 'currency', 'payeeAlias');
+        $this->validate('notifyUrl', 'amount', 'currency', 'payeeAlias', 'payeePaymentReference', 'message');
 
         $data = array(
             'callbackUrl' => $this->getNotifyUrl(),
