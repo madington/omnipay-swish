@@ -52,6 +52,16 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('payeePaymentReference', $value);
     }
 
+    public function getMessage()
+    {
+        return $this->getParameter('message');
+    }
+
+    public function setMessage($value)
+    {
+        return $this->setParameter('message', $value);
+    }
+
     public function getPayerAlias()
     {
         return $this->getParameter('payerAlias');
@@ -94,6 +104,8 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             'currency'    => $this->getCurrency(),
             'payerAlias'  => $this->getPayerAlias(),
             'payeeAlias'  => $this->getPayeeAlias(),
+            'payeePaymentReference' = $this->getPayeePaymentReference(),
+            'message'     => $this->getMessage()
         );
 
         return $data;

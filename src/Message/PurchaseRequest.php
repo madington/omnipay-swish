@@ -8,7 +8,7 @@ class PurchaseRequest extends AbstractRequest
     {
         $data = parent::getData();
 
-        $data['message'] = $this->getDescription();
+        //$data['message'] = $this->getDescription();
 
         return $data;
     }
