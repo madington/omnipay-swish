@@ -1,6 +1,6 @@
 <?php
 
-namespace \Message;
+namespace Omnipay\Swish\Message;
 
 class PurchaseRequest extends AbstractRequest
 {
