@@ -104,7 +104,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             'currency'    => $this->getCurrency(),
             'payerAlias'  => $this->getPayerAlias(),
             'payeeAlias'  => $this->getPayeeAlias(),
-            'payeePaymentReference' = $this->getPayeePaymentReference(),
+            'payeePaymentReference' => $this->getPayeePaymentReference(),
             'message'     => $this->getMessage()
         );
 
