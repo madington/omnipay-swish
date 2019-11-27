@@ -7,9 +7,6 @@ class PurchaseRequest extends AbstractRequest
     public function getData()
     {
         $data = parent::getData();
-
-        $data['specialmessage'] = 'madington';
-
         return $data;
     }
 
