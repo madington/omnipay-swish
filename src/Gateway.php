@@ -113,7 +113,7 @@ class Gateway extends AbstractGateway
     public function purchase(array $parameters = array())
     {
         file_put_contents("php://stdout", "in purchase!");
-        return $this->createRequest('\Message\PurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\Swish\Message\PurchaseRequest', $parameters);
     }
 
     public function fetchTransaction(array $parameters = array())
